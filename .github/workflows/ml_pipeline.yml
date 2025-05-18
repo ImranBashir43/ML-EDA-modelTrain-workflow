@@ -31,7 +31,7 @@ jobs:
         python ml_pipeline.py
 
     - name: Upload model artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v3.1.3
       with:
         name: trained-model
         path: random_forest_model.joblib
