@@ -15,7 +15,6 @@ def preprocess_data(df):
     # Drop irrelevant columns
     df = df.drop(columns=["Name", "Ticket", "Cabin", "PassengerId"])
     
-    # Fill missing Age with median
     imputer = SimpleImputer(strategy='median')
     df['Age'] = imputer.fit_transform(df[['Age']])
     
